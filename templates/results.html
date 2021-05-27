@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header>
+        <br>
+        <div class="container">
+            <h1>Salary Predictor Results</h1>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="fieldset">
+            <h2>Your predicted salary is ${{output}} </h2>
+            <h4>which is based on the following personal inputs:</h4>
+            <ul>
+                <li>AGE: {{age}}</li>
+                <li>US CITIZEN: {{ctzn}}</li>
+                <li>GENDER: {{gender}}</li>
+                <li>ASSOCIATE DEGREE: {{assoc}} </li>
+                <li>CERTIFICATION/LICENSE: {{clic}}</li>
+                <li>HIGHEST DEGREE:{{hdgr}} </li>
+                <li>OCCUPATION FIELD: {{occfield}} </li>
+                <li>RACE/ETHNICITY:{{race}}</li>
+            </ul>
+            <h6>Source: 2019 National Survey of College Graduates (NSCG) Data from the National Science Foundation</h6>
+        </div>
+        <img src="https://media3.giphy.com/media/60eTRV2GzNSfkS6gvi/giphy.gif" class="center" />
+    </div>
+
+    </div>
+
+
+
+</body>

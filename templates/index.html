@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <br>
+    <title>Salary Model</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h2>Salary Predictor</h2>
+        </div>
+    </header>
+    <div class="container">
+
+        <img src="https://media.giphy.com/media/l2JJu8U8SoHhQEnoQ/giphy.gif" class="center" />
+
+        <form action="/predict" method="POST" class="form">
+            <div class="fieldset">
+                <br>
+                <ul>
+                    <li> <label>Enter Your Age</label>
+                        <input class="age" name="age" />
+                    </li>
+                    <li> <label>Enter Your U.S. Citizen Status (1=US, 2=US Naturalized, 3=Non-US Permanent, 4=Non-US
+                            Temporary)</label>
+                        <input class="ctzn" name="ctzn" />
+                    </li>
+                    <li><label>Enter Your Gender (0=Male, 1=Female)</label>
+                        <input class="gender" name="gender" />
+                    </li>
+                    <li><label>Enter If You Have a Associate degree (0=No, 1=Yes)</label>
+                        <input class="assoc" name="assoc" />
+                    </li>
+                    <li> <label>Enter If You Have a Licence or Certification (0=No, 1=Yes)</label>
+                        <input class="clic" name="clic" />
+                    </li>
+                    <li><label>Enter Your Highest Degree (1=Bachelor's, 2=Master's, 3=Doctorate, 4=Profesional)</label>
+                        <input class="hdgr" name="hdgr" />
+                    </li>
+                    <li> <label>Enter Your Occupation Field(1=Computer & Math Sci., 2=Bio, Agr, Life Sci., 3=Physical
+                            Sci.,
+                            4=Social Sci., 5=Engineer, 6=Health, 7=Non-Science & Engineering)</label>
+                        <input class="occfield" name="occfield" />
+                    </li>
+                    <li>
+                        <label>Enter Your Race/Ethnicity (1=Asian, 2=AI/NA, 3=Black, 4=Hispanic, 5=White, 6=Pac Isl,
+                            7=Multi-race)</label>
+                        <input class="race" name="race" />
+                    </li>
+                </ul>
+            </div>
+            <input type="submit" class="button" value="predict">
+        </form>
+    </div>
+</body>
+
+</html>
